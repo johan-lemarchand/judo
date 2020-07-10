@@ -1,0 +1,24 @@
+.calendar-years {
+  width: 100%;
+  padding: 5px;
+  line-height: 25px;
+  background-color: #4b6289;
+}
+
+.calendar-years-selector {
+  padding: 1rem;
+  background-color: white;
+}
+
+.calendar-year {
+  width: 33%;
+  margin: 5px 0;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 5px;
+}
+
+.calendar-year:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}

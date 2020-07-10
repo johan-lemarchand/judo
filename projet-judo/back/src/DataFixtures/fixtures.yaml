@@ -1,0 +1,80 @@
+#App\Entity\Genre: # namespace de l'entité
+#    genre_{1..42}: #le nombre d'iteration d'entité souhaité ici : genre_1, genre_2...genre_23
+#        name: '<word()>' <-- numberBetween(0,5), sentence(),(...)  cf (https://github.com/fzaninotto/Faker#basic-usage)
+
+App\Entity\User:
+    user_{1..10}:
+        firstname: '<firstName()>'
+        lastname: '<lastName()>'
+        address: '<address()>'
+        telephone: '<isbn10()>'
+        email: '<email()>'
+        password: '\$argon2id\$v=19\$m=65536,t=4,p=1\$icQTO200bPENeuMS2VFL/Q\$NdR9NMBVmhbl2atpFitM5UzIxcRcd03/kM+03EegOI8'
+        status: '1'
+        categorie: '@categorie_*'
+        picture: '<imageUrl(100, 100)>'
+        
+
+App\Entity\Presentation:
+    presentation_{1}:
+        title: '<word(12)>'
+        content: '<text(120)>'
+        picture: '<imageUrl(100, 100)>'
+
+
+App\Entity\Role:
+    role_{1}:
+        name: 'utilisateur'
+        roleString: 'ROLE_USER'
+                
+
+        
+App\Entity\Event:
+    event_{1..10}:
+        title: '<word(12)>'
+        date: '<dateTime()>'
+        place: '<address()>'
+        picture: '<imageUrl(100, 100)>'
+        content: '<text(100)>'
+        createdAt: '<dateTime()>'   
+
+App\Entity\Tag:
+    tag_{1..5}:
+        name: '<word(6)>'
+
+
+App\Entity\Comment:
+    comment_{1..10}:
+        body: '<text(35)>'
+        
+
+App\Entity\Training:
+    training_{1..7}:
+        title: '<word(15)>'
+        date: '<dateTime()>'
+        content: '<text(35)>'
+        duration: '<dateTime()>'
+
+App\Entity\Article:
+    article_{1..10}:
+        title: '<word(12)>'
+        content: '<text(200)>'
+        createdAt: '<dateTime()>'
+        picture: '<imageUrl(100, 100)>'
+        user: '@user_*'
+
+App\Entity\Categorie:
+    categorie_{1..6}:
+        name: '<word(10)>'
+        weight: '<numberBetween(50, 100)>'
+        gender: '<word(10)>'
+
+        
+App\Entity\Sponsor:
+    sponsor_{1..6}:
+        picture: '<imageUrl(100, 100)>'
+        title: '<company()>'
+        content: '<text(200)>'
+        address: '<address()>'
+        telephone: '<isbn10()>'              
+            

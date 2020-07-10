@@ -1,0 +1,188 @@
+@font-face {
+  font-family: Wallington;
+  src: url(./../../assets/fonts/WallingtonRegular-PYK7.ttf);
+}
+@font-face {  
+  font-family: Cooper;
+  src: url(./../../assets/fonts/CooperHewitt-Book.otf);
+}
+@font-face {  
+  font-family: Noto;
+  src: url(./../../assets/fonts/NotoSansJP-Bold.otf);
+}
+.header {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(black, #141e30);
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        height: 8em;
+        
+
+        &__logo {
+            width: 230px;
+            height: 150px;
+            //padding: 15px;
+            //color: #FEC529;
+            //font-family: "Wallington";
+            //margin-top: 20px;
+            
+}
+   
+        &__ffjudo {
+            display: flex;
+            
+        }
+    }
+
+     &__nav {
+        justify-content: space-evenly;
+        
+    } 
+}
+
+* {
+    & li {
+      list-style: none;
+    }
+    
+  }
+  .nav-link {
+    text-decoration: none;
+    color: #0f55a3;
+    font-family: "Cooper";
+    font-size: 22px;
+  }
+  .menuContainer {
+    display: block;
+    position: relative;
+    width: 1900px;
+    height: 150px;
+    margin: 0 auto;
+  }
+    
+  .menu {
+    width: 150px;
+    height: 150px;
+    display: block;
+    position: relative;
+    margin: -150px auto;
+    background: white;
+    border-radius: 100%;
+    //border: 1px solid white;
+    cursor: pointer;
+    z-index: 10;
+    & ul {
+      padding: 0;
+      width: 100%;
+      display: none;
+      position: relative;
+      text-align: center;
+      top: 4px;
+      & li {
+        display: inline-block;
+        position: relative;
+        font-family: Cooper;
+        font-size: 25px;
+        //box-sizing: border-box;
+        width: 160px;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 50px;
+        &:last-child {
+          margin-right: 0;
+        }&:hover {
+          background: #e6243e;
+          width: 160px;
+          & a {
+            
+            color: #0f55a3;
+          }
+        }
+      }
+    }
+  }
+   
+
+  .menuTitle {
+    line-height: 150px;
+    width: 160px;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 8px;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    //top: 150px;
+    z-index: 11;
+    padding-left: 10px;
+    font-family: Cooper;
+    cursor: pointer;
+    -webkit-user-select: none;
+  }
+  
+.test {
+    color: white;
+    background-color: #212529;  
+}
+
+.d-sm-flex {
+    font-size: 4em;
+}
+
+.body_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 150px;
+  * {
+    width: 200px;
+    height: 200px;
+  }
+.view {
+  transform-style: preserve-3d;
+  perspective: var(--persp);
+  .mat {
+    position: relative;
+    transition: transform 1s;
+    background: repeating-linear-gradient(to bottom, transparent 0.1vh, rgba(116, 149, 183, 0.08) 6vh), repeating-linear-gradient(to right, transparent 0.1vh, rgba(116, 149, 183, 0.08) 6vh);
+    transform-style: preserve-3d;
+    a {
+      position: absolute;
+      display: block;
+      transition: opacity 0.5s 0.2s;
+      opacity: 0;
+      transform: rotate3d(var(--x), var(--y), var(--z), var(--a));
+      transform-style: preserve-3d;
+      // angle presets:
+      &:nth-of-type(4n + 1) {
+        --x: 1; --y: 0; --z: 1; --a: 45deg;
+      }
+      &:nth-of-type(4n + 2) {
+        --x: 1; --y: 1; --z: 0; --a: 45deg;
+      }
+      &:nth-of-type(4n + 3) {
+        --x: 1; --y: 1; --z: 0; --a: -45deg;
+      }
+      &:nth-of-type(4n + 4) {
+        --x: 1; --y: 1; --z: 1; --a: 45deg;
+      }
+      &.focus {
+        opacity: 1;
+      }
+      img {
+        opacity: 0.9;
+        object-fit: cover;
+      }
+    }
+  }
+}
+}
